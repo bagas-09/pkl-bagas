@@ -1,23 +1,20 @@
+// ignore: file_names
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:image_picker/image_picker.dart';
-import 'package:tryhard/PenilaianPelanggan.dart';
-import 'package:tryhard/laporan10T.dart';
-import 'package:tryhard/laporan11T.dart';
+import 'package:tryhard/Admin/laporan12A.dart';
 import 'dart:io';
 
-import 'package:tryhard/laporan2T.dart';
-import 'package:tryhard/laporan8T.dart';
-import 'package:tryhard/laporan9T.dart';
+import 'package:tryhard/TL/laporan12TL.dart';
 
-class Laporan12Page extends StatefulWidget {
-  const Laporan12Page({Key? key}) : super(key: key);
+class Laporan11PageTL extends StatefulWidget {
+  const Laporan11PageTL({Key? key}) : super(key: key);
 
   @override
   State<StatefulWidget> createState() => InitState();
 }
 
-class InitState extends State<Laporan12Page> {
+class InitState extends State<Laporan11PageTL> {
   File? _image;
 
   Future getImage(ImageSource src) async {
@@ -84,10 +81,7 @@ class InitState extends State<Laporan12Page> {
                             )
                           ]),
                       onTap: () {
-                        Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => Laporan11Page()));
+                        Navigator.pop(context);
                       },
                     )
                   ],
@@ -99,25 +93,25 @@ class InitState extends State<Laporan12Page> {
             height: 20,
           ),
           Container(
-              margin: EdgeInsets.only(left: 80, top: 5),
               child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                mainAxisSize: MainAxisSize.max,
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: <Widget>[
-                  Align(
-                    alignment: Alignment.centerLeft,
-                    child: Text(
-                      "RUMAH PELANGGAN TAMPAK DEPAN",
-                      style: TextStyle(
-                        color: Colors.black,
-                        fontSize: 25,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
+            mainAxisAlignment: MainAxisAlignment.center,
+            mainAxisSize: MainAxisSize.max,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: <Widget>[
+              Align(
+                alignment: Alignment.center,
+                child: Text(
+                  "TEKNISI DENGAN PELANGGAN",
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontSize: 25,
+                    fontWeight: FontWeight.bold,
                   ),
-                ],
-              )),
+                ),
+              ),
+            ],
+          )),
           Padding(
               padding: const EdgeInsets.all(8.0),
               child: Container(
@@ -181,19 +175,19 @@ class InitState extends State<Laporan12Page> {
                   ),
                 ),
               )),
-          SizedBox(
-            height: 5,
+          const SizedBox(
+            height: 10,
           ),
           Container(
-              margin: EdgeInsets.only(left: 45, right: 20, top: 5),
+              margin: const EdgeInsets.only(left: 45, right: 20, top: 5),
               child: Column(
-                children: <Widget>[
+                children: const <Widget>[
                   Align(
                     alignment: Alignment.centerLeft,
                     child: Text(
-                      "PANJANG PENGGUNAAN DC DARI ODP KE RUMAH PELANGGAN",
+                      "Penilaian",
                       style: TextStyle(
-                        color: Colors.black,
+                        color: Colors.black87,
                         fontSize: 18,
                         fontWeight: FontWeight.bold,
                       ),
@@ -202,12 +196,12 @@ class InitState extends State<Laporan12Page> {
                 ],
               )),
           Container(
-            margin: EdgeInsets.only(left: 20, right: 20, top: 5),
-            padding: EdgeInsets.only(left: 20, right: 20),
+            margin: const EdgeInsets.only(left: 20, right: 20, top: 5),
+            padding: const EdgeInsets.only(left: 20, right: 20),
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(50),
               color: Colors.grey[200],
-              boxShadow: [
+              boxShadow: const [
                 BoxShadow(
                     offset: Offset(0, 10),
                     blurRadius: 50,
@@ -215,14 +209,17 @@ class InitState extends State<Laporan12Page> {
               ],
             ),
             alignment: Alignment.center,
-            child: TextField(
+            child: const TextField(
               cursorColor: Colors.red,
               decoration: InputDecoration(
-                hintText: "Masukkan Panjangnya",
+                hintText: "Masukkan Komentar Penilaian",
                 enabledBorder: InputBorder.none,
                 focusedBorder: InputBorder.none,
               ),
             ),
+          ),
+          const SizedBox(
+            height: 5,
           ),
           Padding(
             padding: const EdgeInsets.all(80.0),
@@ -242,10 +239,8 @@ class InitState extends State<Laporan12Page> {
                     borderRadius: BorderRadius.circular(40), color: Colors.red),
               ),
               onTap: () {
-                Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => LaporanPenilaianPelanggan()));
+                Navigator.pushReplacement(context,
+                    MaterialPageRoute(builder: (context) => Laporan12PageA()));
               },
             ),
           ),

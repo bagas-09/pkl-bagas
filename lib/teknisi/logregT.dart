@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:tryhard/login_teknisi.dart';
-import 'package:tryhard/thebegining.dart';
+import 'package:tryhard/teknisi/login_teknisi.dart';
+import 'package:tryhard/teknisi/registerT.dart';
 
-class TheBegining extends StatefulWidget {
-  const TheBegining({Key? key}) : super(key: key);
+class LogRegT extends StatefulWidget {
+  const LogRegT({Key? key}) : super(key: key);
 
   @override
-  State<TheBegining> createState() => _TheBegining();
+  State<LogRegT> createState() => _TheBegining();
 }
 
-class _TheBegining extends State<TheBegining> {
+class _TheBegining extends State<LogRegT> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -58,7 +58,7 @@ class _TheBegining extends State<TheBegining> {
                               builder: (context) => LoginScreen()));
                     },
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 10,
                   ),
                   GestureDetector(
@@ -77,6 +77,12 @@ class _TheBegining extends State<TheBegining> {
                           borderRadius: BorderRadius.circular(40),
                           color: Colors.white),
                     ),
+                    onTap: () {
+                      Navigator.pushReplacement(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const RegisterPage()));
+                    },
                   ),
                 ],
               ),

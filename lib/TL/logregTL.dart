@@ -1,24 +1,24 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:tryhard/Admin/logregA.dart';
-import 'package:tryhard/TL/logregTL.dart';
-import 'package:tryhard/teknisi/logregT.dart';
+import 'package:tryhard/Admin/regisA.dart';
+import 'package:tryhard/TL/loginTL.dart';
+import 'package:tryhard/TL/regisTL.dart';
 
-class User extends StatefulWidget {
-  const User({Key? key}) : super(key: key);
+class LogRegTL extends StatefulWidget {
+  const LogRegTL({Key? key}) : super(key: key);
 
   @override
-  State<User> createState() => _UserState();
+  State<LogRegTL> createState() => _TheBegining();
 }
 
-class _UserState extends State<User> {
+class _TheBegining extends State<LogRegTL> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
       child: Stack(
         children: <Widget>[
           Image(
-            image: AssetImage("assets/images/walpaper.png"),
+            image: const AssetImage("assets/images/walpaper.png"),
             height: MediaQuery.of(context).size.height,
             width: MediaQuery.of(context).size.width,
             fit: BoxFit.cover,
@@ -27,8 +27,9 @@ class _UserState extends State<User> {
             backgroundColor: Colors.transparent,
             appBar: AppBar(
               backgroundColor: Colors.transparent,
+              elevation: 0,
             ),
-            body: Container(
+            body: SizedBox(
               height: MediaQuery.of(context).size.height,
               width: MediaQuery.of(context).size.width,
               child: Column(
@@ -40,7 +41,7 @@ class _UserState extends State<User> {
                       child: Padding(
                         padding: const EdgeInsets.all(10),
                         child: Text(
-                          'ADMIN',
+                          'MASUK',
                           style: GoogleFonts.montserrat(
                               fontWeight: FontWeight.bold,
                               color: Colors.white,
@@ -52,11 +53,13 @@ class _UserState extends State<User> {
                           color: Colors.red),
                     ),
                     onTap: () {
-                      Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => const LogRegA()));
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const LoginTL()));
                     },
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 10,
                   ),
                   GestureDetector(
@@ -64,7 +67,7 @@ class _UserState extends State<User> {
                       child: Padding(
                         padding: const EdgeInsets.all(10),
                         child: Text(
-                          'TEAM LEADER',
+                          'DAFTAR',
                           style: GoogleFonts.montserrat(
                               fontWeight: FontWeight.bold,
                               color: Colors.red,
@@ -76,32 +79,10 @@ class _UserState extends State<User> {
                           color: Colors.white),
                     ),
                     onTap: () {
-                      Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => LogRegTL()));
-                    },
-                  ),
-                  SizedBox(
-                    height: 10,
-                  ),
-                  GestureDetector(
-                    child: Container(
-                      child: Padding(
-                        padding: const EdgeInsets.all(10),
-                        child: Text(
-                          'TEKNISI',
-                          style: GoogleFonts.montserrat(
-                              fontWeight: FontWeight.bold,
-                              color: Colors.white,
-                              fontSize: 30),
-                        ),
-                      ),
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(40),
-                          color: Colors.red),
-                    ),
-                    onTap: () {
-                      Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => LogRegT()));
+                      Navigator.pushReplacement(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const RegisterPageA()));
                     },
                   ),
                 ],

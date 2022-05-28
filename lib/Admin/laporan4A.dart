@@ -1,21 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:image_picker/image_picker.dart';
-import 'package:tryhard/homepage.dart';
 import 'dart:io';
 
-import 'package:tryhard/laporan2T.dart';
-import 'package:tryhard/laporan4T.dart';
-import 'package:tryhard/laporan6T.dart';
+import 'package:tryhard/TL/laporan5TL.dart';
 
-class Laporan5Page extends StatefulWidget {
-  const Laporan5Page({Key? key}) : super(key: key);
+class Laporan4PageA extends StatefulWidget {
+  const Laporan4PageA({Key? key}) : super(key: key);
 
   @override
   State<StatefulWidget> createState() => InitState();
 }
 
-class InitState extends State<Laporan5Page> {
+class InitState extends State<Laporan4PageA> {
   File? _image;
 
   Future getImage(ImageSource src) async {
@@ -82,10 +79,7 @@ class InitState extends State<Laporan5Page> {
                             )
                           ]),
                       onTap: () {
-                        Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => Laporan4Page()));
+                        Navigator.pop(context);
                       },
                     )
                   ],
@@ -97,25 +91,25 @@ class InitState extends State<Laporan5Page> {
             height: 20,
           ),
           Container(
-              margin: EdgeInsets.only(left: 80, top: 5),
               child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                mainAxisSize: MainAxisSize.max,
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: <Widget>[
-                  Align(
-                    alignment: Alignment.centerLeft,
-                    child: Text(
-                      "HOOK/SCLAMP DI RUMAH PELANGGAN (TAMPAK DEKAT)",
-                      style: TextStyle(
-                        color: Colors.black,
-                        fontSize: 25,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
+            mainAxisAlignment: MainAxisAlignment.center,
+            mainAxisSize: MainAxisSize.max,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: <Widget>[
+              Align(
+                alignment: Alignment.center,
+                child: Text(
+                  "PULLSTRAP/SCLAMP DI TIANG",
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontSize: 25,
+                    fontWeight: FontWeight.bold,
                   ),
-                ],
-              )),
+                ),
+              ),
+            ],
+          )),
           Padding(
               padding: const EdgeInsets.all(8.0),
               child: Container(
@@ -179,6 +173,52 @@ class InitState extends State<Laporan5Page> {
                   ),
                 ),
               )),
+          const SizedBox(
+            height: 10,
+          ),
+          Container(
+              margin: const EdgeInsets.only(left: 45, right: 20, top: 5),
+              child: Column(
+                children: const <Widget>[
+                  Align(
+                    alignment: Alignment.centerLeft,
+                    child: Text(
+                      "Penilaian",
+                      style: TextStyle(
+                        color: Colors.black87,
+                        fontSize: 18,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ),
+                ],
+              )),
+          Container(
+            margin: const EdgeInsets.only(left: 20, right: 20, top: 5),
+            padding: const EdgeInsets.only(left: 20, right: 20),
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(50),
+              color: Colors.grey[200],
+              boxShadow: const [
+                BoxShadow(
+                    offset: Offset(0, 10),
+                    blurRadius: 50,
+                    color: Color(0xffEEEEEE))
+              ],
+            ),
+            alignment: Alignment.center,
+            child: const TextField(
+              cursorColor: Colors.red,
+              decoration: InputDecoration(
+                hintText: "Masukkan Komentar Penilaian",
+                enabledBorder: InputBorder.none,
+                focusedBorder: InputBorder.none,
+              ),
+            ),
+          ),
+          const SizedBox(
+            height: 5,
+          ),
           Padding(
             padding: const EdgeInsets.all(80.0),
             child: GestureDetector(
@@ -197,8 +237,8 @@ class InitState extends State<Laporan5Page> {
                     borderRadius: BorderRadius.circular(40), color: Colors.red),
               ),
               onTap: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => const Laporan6Page()));
+                Navigator.pushReplacement(context,
+                    MaterialPageRoute(builder: (context) => Laporan5PageTL()));
               },
             ),
           ),

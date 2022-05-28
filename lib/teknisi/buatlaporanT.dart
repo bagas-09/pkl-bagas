@@ -3,19 +3,17 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:image_picker/image_picker.dart';
 import 'dart:io';
 
-import 'package:tryhard/laporan2T.dart';
-import 'package:tryhard/laporan5T.dart';
-import 'package:tryhard/laporan6T.dart';
-import 'package:tryhard/laporan8T.dart';
 
-class Laporan7Page extends StatefulWidget {
-  const Laporan7Page({Key? key}) : super(key: key);
+import 'laporan2T.dart';
+
+class LaporanPage extends StatefulWidget {
+  const LaporanPage({Key? key}) : super(key: key);
 
   @override
   State<StatefulWidget> createState() => InitState();
 }
 
-class InitState extends State<Laporan7Page> {
+class InitState extends State<LaporanPage> {
   File? _image;
 
   Future getImage(ImageSource src) async {
@@ -62,9 +60,8 @@ class InitState extends State<Laporan7Page> {
                           mainAxisSize: MainAxisSize.max,
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: <Widget>[
-                            Padding(
-                              padding:
-                                  const EdgeInsets.only(left: 20, bottom: 60),
+                            const Padding(
+                              padding: EdgeInsets.only(left: 20, bottom: 60),
                               child: Icon(
                                 Icons.arrow_back,
                                 color: Colors.white,
@@ -82,14 +79,98 @@ class InitState extends State<Laporan7Page> {
                             )
                           ]),
                       onTap: () {
-                        Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => Laporan6Page()));
+                        Navigator.pop(context);
                       },
                     )
                   ],
                 ),
+              ),
+            ),
+          ),
+          const SizedBox(
+            height: 20,
+          ),
+          Container(
+              margin: EdgeInsets.only(left: 45, right: 20, top: 5),
+              child: Column(
+                children: <Widget>[
+                  Align(
+                    alignment: Alignment.centerLeft,
+                    child: Text(
+                      "MYIR / SC",
+                      style: TextStyle(
+                        color: Colors.black87,
+                        fontSize: 18,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ),
+                ],
+              )),
+          Container(
+            margin: EdgeInsets.only(left: 20, right: 20, top: 5),
+            padding: EdgeInsets.only(left: 20, right: 20),
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(50),
+              color: Colors.grey[200],
+              boxShadow: [
+                BoxShadow(
+                    offset: Offset(0, 10),
+                    blurRadius: 50,
+                    color: Color(0xffEEEEEE))
+              ],
+            ),
+            alignment: Alignment.center,
+            child: TextField(
+              cursorColor: Colors.red,
+              decoration: InputDecoration(
+                hintText: "Masukkan MYIR / SC",
+                enabledBorder: InputBorder.none,
+                focusedBorder: InputBorder.none,
+              ),
+            ),
+          ),
+          SizedBox(
+            height: 5,
+          ),
+          Container(
+              margin: EdgeInsets.only(left: 45, right: 20, top: 5),
+              child: Column(
+                children: <Widget>[
+                  Align(
+                    alignment: Alignment.centerLeft,
+                    child: Text(
+                      "TANGGAL WO",
+                      style: TextStyle(
+                        color: Colors.black87,
+                        fontSize: 18,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ),
+                ],
+              )),
+          Container(
+            margin: EdgeInsets.only(left: 20, right: 20, top: 5),
+            padding: EdgeInsets.only(left: 20, right: 20),
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(50),
+              color: Colors.grey[200],
+              boxShadow: [
+                BoxShadow(
+                    offset: Offset(0, 10),
+                    blurRadius: 50,
+                    color: Color(0xffEEEEEE))
+              ],
+            ),
+            alignment: Alignment.center,
+            child: TextField(
+              keyboardType: TextInputType.datetime,
+              cursorColor: Colors.red,
+              decoration: InputDecoration(
+                hintText: "Masukkan Tanggal WO",
+                enabledBorder: InputBorder.none,
+                focusedBorder: InputBorder.none,
               ),
             ),
           ),
@@ -106,7 +187,7 @@ class InitState extends State<Laporan7Page> {
                   Align(
                     alignment: Alignment.centerLeft,
                     child: Text(
-                      "JALUR IKR PELANGGAN (TAMPAK SEMUA)",
+                      "JALUR KELUAR PSB",
                       style: TextStyle(
                         color: Colors.black,
                         fontSize: 25,
@@ -197,8 +278,8 @@ class InitState extends State<Laporan7Page> {
                     borderRadius: BorderRadius.circular(40), color: Colors.red),
               ),
               onTap: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => Laporan8Page()));
+                Navigator.pushReplacement(context,
+                    MaterialPageRoute(builder: (context) => Laporan2Page()));
               },
             ),
           ),

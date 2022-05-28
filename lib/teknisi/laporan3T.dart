@@ -1,23 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:image_picker/image_picker.dart';
-import 'package:tryhard/PenilaianPelanggan.dart';
-import 'package:tryhard/laporan10T.dart';
-import 'package:tryhard/laporan12T.dart';
 import 'dart:io';
 
-import 'package:tryhard/laporan2T.dart';
-import 'package:tryhard/laporan8T.dart';
-import 'package:tryhard/laporan9T.dart';
+import 'laporan4T.dart';
 
-class Laporan11Page extends StatefulWidget {
-  const Laporan11Page({Key? key}) : super(key: key);
+
+class Laporan3Page extends StatefulWidget {
+  const Laporan3Page({Key? key}) : super(key: key);
 
   @override
   State<StatefulWidget> createState() => InitState();
 }
 
-class InitState extends State<Laporan11Page> {
+class InitState extends State<Laporan3Page> {
   File? _image;
 
   Future getImage(ImageSource src) async {
@@ -84,10 +80,7 @@ class InitState extends State<Laporan11Page> {
                             )
                           ]),
                       onTap: () {
-                        Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => Laporan10Page()));
+                        Navigator.pop(context);
                       },
                     )
                   ],
@@ -108,7 +101,8 @@ class InitState extends State<Laporan11Page> {
                   Align(
                     alignment: Alignment.centerLeft,
                     child: Text(
-                      "TEKNISI DENGAN PELANGGAN",
+                      "REDAMAN OUT ODP",
+                      textAlign: TextAlign.center,
                       style: TextStyle(
                         color: Colors.black,
                         fontSize: 25,
@@ -199,8 +193,8 @@ class InitState extends State<Laporan11Page> {
                     borderRadius: BorderRadius.circular(40), color: Colors.red),
               ),
               onTap: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => Laporan12Page()));
+                Navigator.pushReplacement(context,
+                    MaterialPageRoute(builder: (context) => Laporan4Page()));
               },
             ),
           ),
