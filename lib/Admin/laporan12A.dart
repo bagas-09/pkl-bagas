@@ -1,6 +1,9 @@
+// ignore_for_file: unnecessary_const
+
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:image_picker/image_picker.dart';
+import 'package:tryhard/Admin/reviewA.dart';
 import 'package:tryhard/TL/reviewTL.dart';
 import 'dart:io';
 
@@ -90,26 +93,25 @@ class InitState extends State<Laporan12PageA> {
           const SizedBox(
             height: 20,
           ),
-          Container(
-              child: Column(
+          Column(
             mainAxisAlignment: MainAxisAlignment.center,
             mainAxisSize: MainAxisSize.max,
             crossAxisAlignment: CrossAxisAlignment.center,
-            children: <Widget>[
-              const Align(
-                alignment: Alignment.center,
-                child: Text(
-                  "RUMAH PELANGGAN TAMPAK DEPAN",
-                  textAlign: TextAlign.center,
-                  style: TextStyle(
-                    color: Colors.black,
-                    fontSize: 25,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
+            children: const <Widget>[
+          Align(
+            alignment: Alignment.center,
+            child: Text(
+              "RUMAH PELANGGAN TAMPAK DEPAN",
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                color: Colors.black,
+                fontSize: 25,
+                fontWeight: FontWeight.bold,
               ),
+            ),
+          ),
             ],
-          )),
+          ),
           Padding(
               padding: const EdgeInsets.all(8.0),
               child: Container(
@@ -179,12 +181,12 @@ class InitState extends State<Laporan12PageA> {
           Container(
               margin: const EdgeInsets.only(left: 30, right: 20, top: 5),
               child: Column(
-                children: <Widget>[
-                  const Align(
+                children: const <Widget>[
+                  Align(
                     alignment: Alignment.centerLeft,
-                    child: const Text(
+                    child: Text(
                       "PANJANG PENGGUNAAN DC DARI ODP KE RUMAH PELANGGAN",
-                      style: const TextStyle(
+                      style: TextStyle(
                         color: Colors.black,
                         fontSize: 18,
                         fontWeight: FontWeight.bold,
@@ -199,11 +201,11 @@ class InitState extends State<Laporan12PageA> {
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(50),
               color: Colors.grey[200],
-              boxShadow: [
-                const BoxShadow(
+              boxShadow: const [
+                BoxShadow(
                     offset: Offset(0, 10),
                     blurRadius: 50,
-                    color: const Color(0xffEEEEEE))
+                    color: Color(0xffEEEEEE))
               ],
             ),
             alignment: Alignment.center,
@@ -284,7 +286,7 @@ class InitState extends State<Laporan12PageA> {
                 Navigator.pushReplacement(
                     context,
                     MaterialPageRoute(
-                        builder: (context) => const ReviewPageTL()));
+                        builder: (context) => const ReviewPageA()));
               },
             ),
           ),

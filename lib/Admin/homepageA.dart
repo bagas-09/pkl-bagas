@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
 import 'package:google_fonts/google_fonts.dart';
-import 'package:tryhard/TL/laporan1TL.dart';
-import 'package:tryhard/TL/loginTL.dart';
-import 'package:tryhard/TL/ubahprofileTL.dart';
+import 'package:tryhard/Admin/daftarlapA.dart';
+import 'package:tryhard/Admin/loginA.dart';
+import 'package:tryhard/Admin/ubahprofileA.dart';
 
 class HomePageA extends StatefulWidget {
   const HomePageA({Key? key}) : super(key: key);
@@ -27,7 +27,7 @@ class InitState extends State<HomePageA> {
           children: [
             Center(
               child: Container(
-                height: 130,
+                height: 110,
                 width: 500,
                 decoration: const BoxDecoration(
                   borderRadius: BorderRadius.only(
@@ -335,20 +335,20 @@ class InitState extends State<HomePageA> {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => const LaporanPageTL()));
+                              builder: (context) => const DaftarLapA()));
                     },
-                  )
+                  ),
                 ],
               ),
             ),
             Container(
-              margin: const EdgeInsets.only(top: 20),
+              margin: const EdgeInsets.only(top: 10),
               child: Column(
                 children: [
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 20.0),
                     child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         GestureDetector(
                           onTap: () {
@@ -356,9 +356,9 @@ class InitState extends State<HomePageA> {
                                 context,
                                 MaterialPageRoute(
                                     builder: (context) =>
-                                        const UbahProfilPageTL()));
+                                        const UbahProfilPageA()));
                           },
-                          child: StatusCard(
+                          child: const StatusCard(
                             title: "UBAH PROFILE",
                             keterangan: "Pengaturan Akun",
                           ),
@@ -370,7 +370,7 @@ class InitState extends State<HomePageA> {
               ),
             ),
             Padding(
-              padding: const EdgeInsets.all(80.0),
+              padding: const EdgeInsets.all(50.0),
               child: GestureDetector(
                 child: Container(
                   child: Padding(
@@ -389,7 +389,7 @@ class InitState extends State<HomePageA> {
                 ),
                 onTap: () {
                   Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => const LoginTL()));
+                      MaterialPageRoute(builder: (context) => const LoginA()));
                 },
               ),
             ),
@@ -401,7 +401,7 @@ class InitState extends State<HomePageA> {
 }
 
 class StatusCard extends StatelessWidget {
-  StatusCard({Key? key, required this.title, required this.keterangan})
+  const StatusCard({Key? key, required this.title, required this.keterangan})
       : super(key: key);
 
   final String title;
@@ -428,7 +428,7 @@ class StatusCard extends StatelessWidget {
         ),
         child: Column(crossAxisAlignment: CrossAxisAlignment.center, children: [
           Text(
-            "$title",
+            title,
             style: GoogleFonts.montserrat(
                 height: 2,
                 fontWeight: FontWeight.bold,
@@ -437,7 +437,7 @@ class StatusCard extends StatelessWidget {
                 fontSize: 21),
           ),
           Text(
-            "$keterangan",
+            keterangan,
             style: GoogleFonts.montserrat(
                 height: 1,
                 fontWeight: FontWeight.normal,

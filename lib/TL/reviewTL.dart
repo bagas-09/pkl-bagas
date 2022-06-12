@@ -258,7 +258,7 @@ class InitState extends State<ReviewPageTL> {
             Navigator.push(
                 context,
                 MaterialPageRoute(
-                    builder: (context) => const LaporanPenilaianA()));
+                    builder: (context) => const LaporanPenilaianTL()));
           },
         ),
       ],

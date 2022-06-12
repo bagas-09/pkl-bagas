@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:tryhard/homepage.dart';
 
@@ -12,6 +13,8 @@ class ReviewPage extends StatefulWidget {
 }
 
 class InitState extends State<ReviewPage> {
+  double? _ratingValue;
+
   @override
   Widget build(BuildContext context) {
     return initWidget();
@@ -190,6 +193,29 @@ class InitState extends State<ReviewPage> {
         const SizedBox(
           height: 30,
         ),
+        RatingBar(
+            initialRating: 0,
+            direction: Axis.horizontal,
+            allowHalfRating: true,
+            itemCount: 5,
+            ratingWidget: RatingWidget(
+                full: const Icon(Icons.star, color: Colors.orange),
+                half: const Icon(
+                  Icons.star_border,
+                  color: Colors.orange,
+                ),
+                empty: const Icon(
+                  Icons.star_outline,
+                  color: Colors.orange,
+                )),
+            onRatingUpdate: (value) {
+              setState(() {
+                _ratingValue = value;
+              });
+            }),
+        const SizedBox(
+          height: 30,
+        ),
         Container(
             margin: const EdgeInsets.only(left: 45, right: 20, top: 5),
             child: Column(
@@ -223,13 +249,11 @@ class InitState extends State<ReviewPage> {
             ],
           ),
           alignment: Alignment.center,
-          child: const TextField(
+          child: TextField(
             keyboardType: TextInputType.multiline,
-            minLines: 1,
-            maxLength: 100,
-            obscureText: true,
+            maxLines: null,
             cursorColor: Colors.red,
-            decoration: InputDecoration(
+            decoration: const InputDecoration(
               hintText: "Masukkan Komentar dari Pelanggan",
               enabledBorder: InputBorder.none,
               focusedBorder: InputBorder.none,

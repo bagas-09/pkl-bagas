@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:image_picker/image_picker.dart';
+import 'package:tryhard/Admin/laporan2A.dart';
 import 'dart:io';
 
 import 'package:tryhard/TL/laporan2TL.dart';
@@ -323,7 +324,7 @@ class InitState extends State<LaporanPageA> {
                 Navigator.pushReplacement(
                     context,
                     MaterialPageRoute(
-                        builder: (context) => const Laporan2PageTL()));
+                        builder: (context) => const Laporan2PageA()));
               },
             ),
           ),

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:tryhard/Admin/laporanpenilaianA.dart';
 import 'package:tryhard/TL/laporanpenilaianTL.dart';
 
 class ReviewPageA extends StatefulWidget {
@@ -256,7 +257,7 @@ class InitState extends State<ReviewPageA> {
             Navigator.push(
                 context,
                 MaterialPageRoute(
-                    builder: (context) => const LaporanPenilaianTL()));
+                    builder: (context) => const LaporanPenilaianA()));
           },
         ),
       ],

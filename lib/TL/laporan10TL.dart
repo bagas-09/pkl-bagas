@@ -240,7 +240,7 @@ class InitState extends State<Laporan10PageTL> {
                 Navigator.pushReplacement(
                     context,
                     MaterialPageRoute(
-                        builder: (context) => const Laporan11PageA()));
+                        builder: (context) => const Laporan11PageTL()));
               },
             ),
           ),

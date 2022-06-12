@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:image_picker/image_picker.dart';
-import 'package:tryhard/Admin/laporan2A.dart';
 import 'dart:io';
 
 import 'package:tryhard/TL/laporan2TL.dart';
@@ -89,6 +88,49 @@ class InitState extends State<LaporanPageTL> {
           ),
           const SizedBox(
             height: 20,
+          ),
+          Container(
+              margin: EdgeInsets.only(left: 45, right: 20, top: 5),
+              child: Column(
+                children: const <Widget>[
+                  Align(
+                    alignment: Alignment.centerLeft,
+                    child: Text(
+                      "NAMA PENILAI",
+                      style: TextStyle(
+                        color: Colors.black87,
+                        fontSize: 18,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ),
+                ],
+              )),
+          Container(
+            margin: const EdgeInsets.only(left: 20, right: 20, top: 5),
+            padding: const EdgeInsets.only(left: 20, right: 20),
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(50),
+              color: Colors.grey[200],
+              boxShadow: const [
+                BoxShadow(
+                    offset: Offset(0, 10),
+                    blurRadius: 50,
+                    color: Color(0xffEEEEEE))
+              ],
+            ),
+            alignment: Alignment.center,
+            child: const TextField(
+              cursorColor: Colors.red,
+              decoration: InputDecoration(
+                hintText: "Masukkan Nama Anda",
+                enabledBorder: InputBorder.none,
+                focusedBorder: InputBorder.none,
+              ),
+            ),
+          ),
+          const SizedBox(
+            height: 5,
           ),
           Container(
               margin: EdgeInsets.only(left: 45, right: 20, top: 5),
@@ -324,7 +366,7 @@ class InitState extends State<LaporanPageTL> {
                 Navigator.pushReplacement(
                     context,
                     MaterialPageRoute(
-                        builder: (context) => const Laporan2PageA()));
+                        builder: (context) => const Laporan2PageTL()));
               },
             ),
           ),

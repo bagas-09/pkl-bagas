@@ -241,7 +241,7 @@ class InitState extends State<Laporan6PageTL> {
                 Navigator.pushReplacement(
                     context,
                     MaterialPageRoute(
-                        builder: (context) => const Laporan7PageA()));
+                        builder: (context) => const Laporan7PageTL()));
               },
             ),
           ),

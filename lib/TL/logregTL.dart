@@ -82,7 +82,7 @@ class _TheBegining extends State<LogRegTL> {
                       Navigator.pushReplacement(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => const RegisterPageA()));
+                              builder: (context) => const RegisterPageTL()));
                     },
                   ),
                 ],

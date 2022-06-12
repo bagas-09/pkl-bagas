@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:image_picker/image_picker.dart';
+import 'package:tryhard/Admin/laporan8A.dart';
 import 'dart:io';
 
 import 'package:tryhard/TL/laporan8TL.dart';
@@ -59,9 +60,9 @@ class InitState extends State<Laporan7PageA> {
                           mainAxisSize: MainAxisSize.max,
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: <Widget>[
-                            Padding(
+                            const Padding(
                               padding:
-                                  const EdgeInsets.only(left: 20, bottom: 60),
+                                  EdgeInsets.only(left: 20, bottom: 60),
                               child: Icon(
                                 Icons.arrow_back,
                                 color: Colors.white,
@@ -238,7 +239,7 @@ class InitState extends State<Laporan7PageA> {
               ),
               onTap: () {
                 Navigator.pushReplacement(context,
-                    MaterialPageRoute(builder: (context) => Laporan8PageTL()));
+                    MaterialPageRoute(builder: (context) => const Laporan8PageA()));
               },
             ),
           ),

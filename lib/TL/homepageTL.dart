@@ -4,6 +4,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:tryhard/Admin/laporan1A.dart';
 import 'package:tryhard/Admin/loginA.dart';
 import 'package:tryhard/Admin/ubahprofileA.dart';
+import 'package:tryhard/TL/daftarlapTL.dart';
 import 'package:tryhard/TL/laporan1TL.dart';
 import 'package:tryhard/TL/loginTL.dart';
 import 'package:tryhard/TL/riwayatTL.dart';
@@ -339,7 +340,7 @@ class InitState extends State<HomePageTL> {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => const LaporanPageA()));
+                              builder: (context) => const DaftarLapTL()));
                     },
                   )
                 ],
@@ -360,7 +361,7 @@ class InitState extends State<HomePageTL> {
                                 context,
                                 MaterialPageRoute(
                                     builder: (context) =>
-                                        const UbahProfilPageA()));
+                                        const UbahProfilPageTL()));
                           },
                           child: StatusCard(
                             title: "UBAH PROFILE",
@@ -406,7 +407,7 @@ class InitState extends State<HomePageTL> {
                 ),
                 onTap: () {
                   Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => LoginA()));
+                      MaterialPageRoute(builder: (context) => LoginTL()));
                 },
               ),
             ),

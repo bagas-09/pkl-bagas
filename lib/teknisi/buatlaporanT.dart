@@ -3,7 +3,6 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:image_picker/image_picker.dart';
 import 'dart:io';
 
-
 import 'laporan2T.dart';
 
 class LaporanPage extends StatefulWidget {
@@ -88,7 +87,50 @@ class InitState extends State<LaporanPage> {
             ),
           ),
           const SizedBox(
-            height: 20,
+            height: 10,
+          ),
+          Container(
+              margin: EdgeInsets.only(left: 45, right: 20, top: 5),
+              child: Column(
+                children: <Widget>[
+                  Align(
+                    alignment: Alignment.centerLeft,
+                    child: Text(
+                      "NAMA TEKNISI",
+                      style: TextStyle(
+                        color: Colors.black87,
+                        fontSize: 18,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ),
+                ],
+              )),
+          Container(
+            margin: EdgeInsets.only(left: 20, right: 20, top: 5),
+            padding: EdgeInsets.only(left: 20, right: 20),
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(50),
+              color: Colors.grey[200],
+              boxShadow: [
+                BoxShadow(
+                    offset: Offset(0, 10),
+                    blurRadius: 50,
+                    color: Color(0xffEEEEEE))
+              ],
+            ),
+            alignment: Alignment.center,
+            child: TextField(
+              cursorColor: Colors.red,
+              decoration: InputDecoration(
+                hintText: "Masukkan Nama Anda",
+                enabledBorder: InputBorder.none,
+                focusedBorder: InputBorder.none,
+              ),
+            ),
+          ),
+          const SizedBox(
+            height: 5,
           ),
           Container(
               margin: EdgeInsets.only(left: 45, right: 20, top: 5),

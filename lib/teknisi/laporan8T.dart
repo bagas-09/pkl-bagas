@@ -60,9 +60,9 @@ class InitState extends State<Laporan8Page> {
                           mainAxisSize: MainAxisSize.max,
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: <Widget>[
-                            Padding(
+                            const Padding(
                               padding:
-                                  const EdgeInsets.only(left: 20, bottom: 60),
+                                  EdgeInsets.only(left: 20, bottom: 60),
                               child: Icon(
                                 Icons.arrow_back,
                                 color: Colors.white,

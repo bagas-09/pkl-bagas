@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:image_picker/image_picker.dart';
+import 'package:tryhard/Admin/laporan3A.dart';
 import 'dart:io';
 
 import 'package:tryhard/TL/laporan3TL.dart';
@@ -61,8 +62,8 @@ class InitState extends State<Laporan2PageA> {
                               mainAxisSize: MainAxisSize.max,
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: <Widget>[
-                                Padding(
-                                  padding: const EdgeInsets.only(
+                                const Padding(
+                                  padding: EdgeInsets.only(
                                       left: 20, bottom: 60),
                                   child: Icon(
                                     Icons.arrow_back,
@@ -90,12 +91,12 @@ class InitState extends State<Laporan2PageA> {
                   ),
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
-              Center(
+              const Center(
                 child: Padding(
-                  padding: const EdgeInsets.only(left: 30, right: 30),
+                  padding: EdgeInsets.only(left: 30, right: 30),
                   child: Text(
                     "ODP TERTUTUP TANPA KABEL DC TERJEPIT",
                     textAlign: TextAlign.center,
@@ -120,7 +121,7 @@ class InitState extends State<Laporan2PageA> {
                           color: Colors.grey.withOpacity(0.5),
                           spreadRadius: 5,
                           blurRadius: 7,
-                          offset: Offset(0, 3), // changes position of shadow
+                          offset: const Offset(0, 3), // changes position of shadow
                         ),
                       ],
                     ),
@@ -135,14 +136,14 @@ class InitState extends State<Laporan2PageA> {
                           // ignore: unnecessary_null_comparison
                           _image == null
                               ? IconButton(
-                                  icon: Icon(Icons.add_a_photo),
+                                  icon: const Icon(Icons.add_a_photo),
                                   onPressed: () {
                                     //getImage();
                                     showDialog(
                                         context: context,
                                         builder: (BuildContext context) {
                                           return SimpleDialog(
-                                            title: Text("Camera/Galery"),
+                                            title: const Text("Camera/Galery"),
                                             children: <Widget>[
                                               SimpleDialogOption(
                                                 onPressed: () async {
@@ -235,7 +236,7 @@ class InitState extends State<Laporan2PageA> {
                     Navigator.pushReplacement(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => Laporan3PageTL()));
+                            builder: (context) => const Laporan3PageA()));
                   },
                 ),
               ),

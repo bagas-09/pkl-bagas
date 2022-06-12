@@ -240,7 +240,7 @@ class InitState extends State<Laporan11PageTL> {
               ),
               onTap: () {
                 Navigator.pushReplacement(context,
-                    MaterialPageRoute(builder: (context) => Laporan12PageA()));
+                    MaterialPageRoute(builder: (context) => Laporan12PageTL()));
               },
             ),
           ),

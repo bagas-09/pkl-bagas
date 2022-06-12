@@ -145,7 +145,7 @@ class InitState extends State<Laporan10Page> {
                                     context: context,
                                     builder: (BuildContext context) {
                                       return SimpleDialog(
-                                        title: Text("Camera/Galery"),
+                                        title: const Text("Camera/Galery"),
                                         children: <Widget>[
                                           SimpleDialogOption(
                                             onPressed: () async {

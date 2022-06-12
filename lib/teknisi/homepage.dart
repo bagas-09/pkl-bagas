@@ -121,7 +121,7 @@ class InitState extends State<HomePage> {
                                           top: 5, left: 5),
                                       child: RichText(
                                           text: TextSpan(
-                                              text: "Maria Nadyarieski Agustha",
+                                              text: "xxxxx xxxxxx xxxxx",
                                               style: GoogleFonts.montserrat(
                                                   fontWeight: FontWeight.bold,
                                                   fontStyle: FontStyle.normal,

@@ -207,7 +207,7 @@ class InitState extends State<RegisterPageTL> {
           ),
           onTap: () {
             Navigator.push(context,
-                MaterialPageRoute(builder: (context) => const LoginA()));
+                MaterialPageRoute(builder: (context) => const LoginTL()));
           },
         ),
       ],

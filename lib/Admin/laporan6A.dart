@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:image_picker/image_picker.dart';
+import 'package:tryhard/Admin/laporan7A.dart';
 import 'dart:io';
 
 import 'package:tryhard/TL/laporan7TL.dart';
@@ -95,7 +96,7 @@ class InitState extends State<Laporan6PageA> {
             mainAxisAlignment: MainAxisAlignment.center,
             mainAxisSize: MainAxisSize.max,
             crossAxisAlignment: CrossAxisAlignment.center,
-            children: <Widget>[
+            children: const <Widget>[
               Align(
                 alignment: Alignment.center,
                 child: Text(
@@ -138,14 +139,14 @@ class InitState extends State<Laporan6PageA> {
                       // ignore: unnecessary_null_comparison
                       _image == null
                           ? IconButton(
-                              icon: Icon(Icons.add_a_photo),
+                              icon: const Icon(Icons.add_a_photo),
                               onPressed: () {
                                 //getImage();
                                 showDialog(
                                     context: context,
                                     builder: (BuildContext context) {
                                       return SimpleDialog(
-                                        title: Text("Camera/Galery"),
+                                        title: const Text("Camera/Galery"),
                                         children: <Widget>[
                                           SimpleDialogOption(
                                             onPressed: () async {
@@ -240,7 +241,7 @@ class InitState extends State<Laporan6PageA> {
                 Navigator.pushReplacement(
                     context,
                     MaterialPageRoute(
-                        builder: (context) => const Laporan7PageTL()));
+                        builder: (context) => const Laporan7PageA()));
               },
             ),
           ),

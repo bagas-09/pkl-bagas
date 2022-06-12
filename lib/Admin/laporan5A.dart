@@ -2,6 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:image_picker/image_picker.dart';
+import 'package:tryhard/Admin/laporan6A.dart';
 import 'dart:io';
 
 import 'package:tryhard/TL/laporan6TL.dart';
@@ -60,9 +61,9 @@ class InitState extends State<Laporan5PageA> {
                           mainAxisSize: MainAxisSize.max,
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: <Widget>[
-                            Padding(
+                            const Padding(
                               padding:
-                                  const EdgeInsets.only(left: 20, bottom: 60),
+                                  EdgeInsets.only(left: 20, bottom: 60),
                               child: Icon(
                                 Icons.arrow_back,
                                 color: Colors.white,
@@ -88,29 +89,28 @@ class InitState extends State<Laporan5PageA> {
               ),
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 20,
           ),
-          Container(
-              child: Column(
+          Column(
             mainAxisAlignment: MainAxisAlignment.center,
             mainAxisSize: MainAxisSize.max,
             crossAxisAlignment: CrossAxisAlignment.center,
-            children: <Widget>[
-              Align(
-                alignment: Alignment.center,
-                child: Text(
-                  "HOOK/SCLAMP DI RUMAH PELANGGAN (TAMPAK DEKAT)",
-                  textAlign: TextAlign.center,
-                  style: TextStyle(
-                    color: Colors.black,
-                    fontSize: 25,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
+            children: const <Widget>[
+          Align(
+            alignment: Alignment.center,
+            child: Text(
+              "HOOK/SCLAMP DI RUMAH PELANGGAN (TAMPAK DEKAT)",
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                color: Colors.black,
+                fontSize: 25,
+                fontWeight: FontWeight.bold,
               ),
+            ),
+          ),
             ],
-          )),
+          ),
           Padding(
               padding: const EdgeInsets.all(8.0),
               child: Container(
@@ -124,7 +124,7 @@ class InitState extends State<Laporan5PageA> {
                       color: Colors.grey.withOpacity(0.5),
                       spreadRadius: 5,
                       blurRadius: 7,
-                      offset: Offset(0, 3), // changes position of shadow
+                      offset: const Offset(0, 3), // changes position of shadow
                     ),
                   ],
                 ),
@@ -139,14 +139,14 @@ class InitState extends State<Laporan5PageA> {
                       // ignore: unnecessary_null_comparison
                       _image == null
                           ? IconButton(
-                              icon: Icon(Icons.add_a_photo),
+                              icon: const Icon(Icons.add_a_photo),
                               onPressed: () {
                                 //getImage();
                                 showDialog(
                                     context: context,
                                     builder: (BuildContext context) {
                                       return SimpleDialog(
-                                        title: Text("Camera/Galery"),
+                                        title: const Text("Camera/Galery"),
                                         children: <Widget>[
                                           SimpleDialogOption(
                                             onPressed: () async {
@@ -241,7 +241,7 @@ class InitState extends State<Laporan5PageA> {
                 Navigator.pushReplacement(
                     context,
                     MaterialPageRoute(
-                        builder: (context) => const Laporan6PageTL()));
+                        builder: (context) => const Laporan6PageA()));
               },
             ),
           ),

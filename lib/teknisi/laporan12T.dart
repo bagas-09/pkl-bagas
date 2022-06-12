@@ -218,6 +218,7 @@ class InitState extends State<Laporan12Page> {
               ),
             ),
           ),
+          
           Padding(
             padding: const EdgeInsets.all(80.0),
             child: GestureDetector(

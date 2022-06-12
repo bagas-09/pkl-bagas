@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:tryhard/Admin/loginA.dart';
+import 'package:tryhard/Admin/regisA.dart';
 import 'package:tryhard/TL/loginTL.dart';
 import 'package:tryhard/TL/regisTL.dart';
 
@@ -55,7 +57,7 @@ class _TheBegining extends State<LogRegA> {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => const LoginTL()));
+                              builder: (context) => const LoginA()));
                     },
                   ),
                   const SizedBox(
@@ -81,7 +83,7 @@ class _TheBegining extends State<LogRegA> {
                       Navigator.pushReplacement(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => const RegisterPageTL()));
+                              builder: (context) => const RegisterPageA()));
                     },
                   ),
                 ],

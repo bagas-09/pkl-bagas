@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 // ignore: unnecessary_import
 import 'package:flutter/rendering.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:tryhard/Admin/loginA.dart';
 import 'package:tryhard/TL/loginTL.dart';
 
 class RegisterPageA extends StatefulWidget {
@@ -206,7 +207,7 @@ class InitState extends State<RegisterPageA> {
           ),
           onTap: () {
             Navigator.push(context,
-                MaterialPageRoute(builder: (context) => const LoginTL()));
+                MaterialPageRoute(builder: (context) => const LoginA()));
           },
         ),
       ],
